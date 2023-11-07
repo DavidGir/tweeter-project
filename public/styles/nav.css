@@ -22,20 +22,22 @@ nav .logo {
   color: #00faff; 
 }
 
+/* Styling for what contains text and icon */
 .tweet-pointer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Angle downs button styling */
 .tweet-pointer button {
   background: none;
   border: none;
   color: #00faff;
   cursor: pointer;
-  margin-top: 0.5em; /* Adjust spacing between text and icon as needed */
 }
 
+/* Targets the text write a new tweet on top of the icon */
 .new-tweet-text {
   /* Makes span take the full width and positions the button below */
   display: block; 
