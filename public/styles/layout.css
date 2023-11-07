@@ -15,10 +15,14 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  /* Spent a long time trying to figure the best tones of color to match the headers background image theme */
+  background: linear-gradient(to right, #022c43, #2a0845, #115173, #882e72, #107dac, #2a0845);
+  /* Ensures text is visible*/
+  color: #ffffff;
   font-size: 24px;
   font-family: "Source Sans 3", sans-serif; 
+  /* Glowing text effect */
+  text-shadow: 0 0 5px #00faff, 0 0 10px #00faff; 
 }
 
 main {
