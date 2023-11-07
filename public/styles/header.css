@@ -1,8 +1,3 @@
-/* Outline to visualize layout */
-* {
-  outline: 1px solid red;
-}
-
 header {
   /* The total height should be 400px visible plus the height of the nav bar */
   height: 520px;

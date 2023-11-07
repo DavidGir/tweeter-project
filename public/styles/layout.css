@@ -10,6 +10,11 @@ html {
   box-sizing: inherit;
 }
 
+/* Outline to visualize layout */
+* {
+  outline: 1px solid red;
+}
+
 /*
  * Global layout stuff
  */
