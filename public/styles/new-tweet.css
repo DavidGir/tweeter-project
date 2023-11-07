@@ -1,0 +1,19 @@
+/* Style the new tweet section like a critical system terminal */
+.new-tweet {
+  /* Dark background for a failure effect */
+  background: #120f0f; 
+  /* Red text for critical failure */
+  color: #ff073a; 
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  width: 80%; 
+  /* Red glow effect */
+  box-shadow: 0 4px 8px rgba(255, 7, 58, 0.6); 
+  /* Gives it a pixelated visual */
+  position: relative;
+}
+
+
+
+
