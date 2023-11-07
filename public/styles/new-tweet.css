@@ -19,6 +19,7 @@
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px;
+  animation: glitch 1.5s infinite linear;
 }
 
 /* Style the form to follow the critical system design */
@@ -44,6 +45,10 @@
   height: 100px;
   /* Disable resizing */
   resize: none; 
+}
+
+.new-tweet textarea:focus {
+  animation: blink 1s step-end infinite;
 }
 
 /* Style the submission area */
@@ -106,4 +111,9 @@
   }
 }
 
-
+/* Add a blinking cursor effect to the textarea */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
