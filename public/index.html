@@ -51,7 +51,6 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <main>
         <!-- Cyberpunk inspired dialogue -->
         <h1>Neon Dreams</h1>
         <p>The city never sleeps, and neither does the neon. It's the lifeblood of the streets, pulsing through the veins of the metropolis, a symphony of light in a world of darkness.</p>
@@ -61,7 +60,19 @@
         <p>The skyscrapers tower like monoliths of power, each a fortress in the corporate wars. Inside, suits and ties are armor, and every meeting is a battle.</p>
         <h2>Neon Rain</h2>
         <p>When the rain falls, it's like a cascade of neon tears, washing the grime off the streets and carrying the stories of a thousand unnamed heroes down into the gutters.</p>
-      </main>
+        
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form>
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+
     </main>
   </body>
 </html>
