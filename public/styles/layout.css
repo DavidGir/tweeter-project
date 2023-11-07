@@ -21,6 +21,14 @@ body {
   font-family: "Source Sans 3", sans-serif; 
 }
 
+main {
+  /* Setting width to 90% of its parent */
+  width: 90%;
+  /* Center aligns the main element */
+  margin: 0 auto; 
+  /* Inherit background color from the parent */
+  background-color: inherit; 
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
