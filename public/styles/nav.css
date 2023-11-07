@@ -1,6 +1,15 @@
 /* Style the nav bar */
 nav {
+  /* Fixed positioning relative to the viewport */
+  position: fixed; 
+  /* Aligns the top edge of the nav bar with the top of the viewport */
+  top: 0; 
+  /* Aligns the left edge of the nav bar with the left of the viewport */
+  left: 0; 
+   /* z-index set to 1000 to ensure nav bar stays above all other page elements when scrolling */
+  z-index: 1000;
   height: 120px;
+  /* Ensures the nav bar extends the full width of the viewport */
   width: 100%;
   /* Dark base for night theme */
   background: #1a1a2e; 
@@ -20,6 +29,7 @@ nav {
 nav .logo {
   font-family: 'Bungee', sans-serif;
   color: #00faff; 
+  font-size: 1.2em;
 }
 
 /* Styling for what contains text and icon */
