@@ -46,7 +46,6 @@
   resize: none; 
 }
 
-
 /* Style the submission area */
 .new-tweet .tweet-submission {
   display: flex;
@@ -66,7 +65,6 @@
   font-weight: bold;
 }
 
-
 /* Change button color on hover to simulate a button press */
 .new-tweet button:hover {
   background: #ff4747;
@@ -76,3 +74,36 @@
 .new-tweet .counter {
   color: #ff073a;
 }
+
+/* Add a glitch effect to the heading https://css-tricks.com/glitch-effect-text-images-svg/*/
+@keyframes glitch {
+  0%, 100% {
+    clip-path: inset(0);
+  }
+  10% {
+    clip-path: inset(0 100% 0 0);
+  }
+  20% {
+    clip-path: inset(0 90% 0 10%);
+  }
+  30% {
+    clip-path: inset(0 80% 0 20%);
+  }
+  40%, 50% {
+    clip-path: inset(0 70% 0 30%);
+  }
+  60% {
+    clip-path: inset(0 60% 0 40%);
+  }
+  70% {
+    clip-path: inset(0 50% 0 50%);
+  }
+  80% {
+    clip-path: inset(0 40% 0 60%);
+  }
+  90% {
+    clip-path: inset(0 30% 0 70%);
+  }
+}
+
+
