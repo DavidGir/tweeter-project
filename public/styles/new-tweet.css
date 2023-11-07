@@ -1,7 +1,8 @@
 /* Style the new tweet section like a critical system terminal */
 .new-tweet {
-  /* Dark background for a failure effect */
-  background: #120f0f; 
+  /* Ensure that image does not repeat and is centered */
+  background: #120f0f url('/images/new-tweet-background.png') no-repeat center center;
+  background-size: cover;
   /* Red text for critical failure */
   color: #ff073a; 
   padding: 20px;
@@ -32,3 +33,15 @@
   color: #ff073a;
 }
 
+/* Style the textarea to look like a system input */
+.new-tweet textarea {
+  /* Black background with 50% opacity */
+  background: rgba(0, 0, 0, 0.5); 
+  color: #ff073a; 
+  border: 1px solid #ff073a; 
+  margin-bottom: 10px;
+  padding: 10px;
+  height: 100px;
+  /* Disable resizing */
+  resize: none; 
+}
