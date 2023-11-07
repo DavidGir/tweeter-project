@@ -12,31 +12,35 @@ $(document).ready(function() {
       console.log('......');
     }, 500);
     
-    // 500ms delay
+    // After 500ms, clear interval and log message
     setTimeout(function() {
-      clearInterval(loadingDots); // Stop adding dots
-      console.log("Neural Link Established");
-    }, 500);
-
-    loadingDots = setInterval(function() {
-      console.log('......');
-    }, 500);
-
-    // Then wait another 1000ms before this logs
-    setTimeout(function() {
+      // Stop adding dots
       clearInterval(loadingDots);
-      console.log("Broadcast booting");
-    
+      console.log("Neural Link Established...");
+
+      // Start new loading sequence
       loadingDots = setInterval(function() {
         console.log('......');
       }, 500);
 
-      // Then wait another 1000ms before this logs
+      // After 1500ms, clear interval and log next message
       setTimeout(function() {
         clearInterval(loadingDots);
-        console.log("Welcome to subnet");
-      }, 1500);
+        console.log("Broadcast booting...");
+      
+        // Start final loading sequence
+        loadingDots = setInterval(function() {
+          console.log('......');
+        }, 500);
+
+        // After another 1500ms, clear interval and log final message
+        setTimeout(function() {
+          clearInterval(loadingDots);
+          console.log("Welcome to subnet");
+        }, 1500);
       // After 1500ms from the initial message
-    }, 1500);
+      }, 1500);
+
+    }, 500);
   });
 });
