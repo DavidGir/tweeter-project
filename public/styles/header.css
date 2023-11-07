@@ -27,3 +27,18 @@ header {
   margin-top: 120px;
 }
 
+.avatar {
+  /* Makes the image round */
+  border-radius: 50%; 
+  width: 150px; 
+  height: 150px;
+  background-image: url("/images/profile-avatar.png");
+  /* Ensures the image covers the area without being stretched */
+  background-size: cover;
+  /* Centers the image in the avatar circle */
+  background-position: center;
+  /* Cool haloed effect neon following theme */
+  box-shadow: 0 0 10px #00faff, 0 0 20px #00faff, 0 0 40px #00faff, 0 0 80px #00faff;
+}
+
+
