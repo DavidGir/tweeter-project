@@ -41,4 +41,18 @@ header {
   box-shadow: 0 0 10px #00faff, 0 0 20px #00faff, 0 0 40px #00faff, 0 0 80px #00faff;
 }
 
+.profile-name {
+  font-family: "Source Sans 3", sans-serif;
+  color: #00faff; 
+  text-align: center;
+  margin-top: 5px; 
+}
+
+.profile-name strong {
+  font-weight: bold;
+}
+
+.profile-name span {
+  font-weight: normal;
+}
 
