@@ -65,3 +65,14 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
+
+/* Change button color on hover to simulate a button press */
+.new-tweet button:hover {
+  background: #ff4747;
+}
+
+/* Style the counter to fit the system failure theme */
+.new-tweet .counter {
+  color: #ff073a;
+}
