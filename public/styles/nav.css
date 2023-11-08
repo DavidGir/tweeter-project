@@ -1,5 +1,5 @@
 /* Style the nav bar */
-nav {
+.nav-bar {
   /* Fixed positioning relative to the viewport */
   position: fixed; 
   /* Aligns the top edge of the nav bar with the top of the viewport */
@@ -42,7 +42,7 @@ nav {
 }
 
 /* Style the logo within span within the nav to use the Bungee font */
-nav .logo {
+.logo {
   font-family: 'Bungee', sans-serif;
   color: #00faff; 
   font-size: 1.2em;
@@ -81,7 +81,7 @@ nav .logo {
 }
 
 /* Style button to take out default background color*/
-button {
+.angle-down-button {
   background: none;
   border: none;
   /* To indicate users that its clickable */
