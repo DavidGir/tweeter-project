@@ -1,7 +1,7 @@
 /* Style the new tweet section like a critical system terminal */
 .new-tweet {
   /* Ensure that image does not repeat and is centered */
-  background: url("/images/new-tweet-background.png") no-repeat center center;
+  background: url("/images/new-tweet-background.png") no-repeat center;
   background-size: cover;
   /* Red text for critical failure */
   text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a;
@@ -50,6 +50,10 @@
 
 .new-tweet textarea:focus {
   animation: blink 1s step-end infinite;
+  /* Brighter red when focused */
+  border-color: #ff6575;
+  outline: none; 
+  box-shadow: 0 0 8px #ff6575; 
 }
 
 /* Style the submission area */
