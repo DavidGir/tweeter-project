@@ -10,3 +10,44 @@ article.tweet {
   box-shadow: 0 4px 8px rgba(255, 7, 58, 0.6); 
 }
 
+article.tweet:hover {
+  /* Haloed red effect */
+  box-shadow: 
+  0 0 10px #ff073a, 
+  0 0 20px #ff073a, 
+  0 0 40px #ff073a, 
+  0 0 80px #ff073a; 
+}
+
+article.tweet header,
+article.tweet footer {
+  /* Styles for header and footer of tweet */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a;
+}
+
+article.tweet .avatar {
+  /* Styles for avatar */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  /* Haloed red effect */
+  box-shadow: 
+  0 0 10px #ff073a, 
+  0 0 20px #ff073a, 
+  0 0 40px #ff073a, 
+  0 0 80px #ff073a; 
+
+}
+
+article.tweet .user-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
