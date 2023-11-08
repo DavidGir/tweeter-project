@@ -1,4 +1,4 @@
-header {
+header.browser-header {
   /* The total height should be 400px visible plus the height of the nav bar */
   height: 520px;
   width: 100%;
