@@ -1,12 +1,17 @@
 // Targeting textarea by its ID:
 $(document).ready(function() {
+  const maxLength = 140;
   $("#tweet-text").on("input", function() {
     // "This" refers to the textarea DOM element
     // Convert "This" to a jQuery object to use jQuery methods like .val()
     const textLength = $(this).val().length;
-    const charactersLeft = 140 - textLength;
+    const charactersLeft = maxLength - textLength;
 
-    console.log(charactersLeft);
+    // Traverse up the common parent and find the counter within that parent:
+    // Find closest ancestor to textarea which is form element and then find descendant element with the class counter within the form:
+    let counter = $(this).closest("form").find(".counter");
+    // Add text setter; it will set text content to update the displayed count
+    counter.text(charactersLeft);
   });
 });
 
