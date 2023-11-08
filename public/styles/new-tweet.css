@@ -32,6 +32,7 @@
 .new-tweet label {
   margin-bottom: 10px;
   color: #ff073a;
+  font-weight: bold;
 }
 
 /* Style the textarea to look like a system input */
@@ -78,6 +79,12 @@
 /* Style the counter to fit the system failure theme */
 .new-tweet .counter {
   color: #ff073a;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.counter.invalid {
+  animation: flashRed 1s linear infinite;
 }
 
 /* Add a glitch effect to the heading https://css-tricks.com/glitch-effect-text-images-svg/*/
