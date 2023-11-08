@@ -9,16 +9,16 @@ $(document).ready(function() {
 
     // Traverse up the common parent and find the counter within that parent:
     // Find closest ancestor to textarea which is form element and then find descendant element with the class counter within the form:
-    let counter = $(this).closest("form").find(".counter");
+    let $counter = $(this).closest("form").find(".counter");
     // Add text setter; it will set text content to update the displayed count
-    counter.text(charactersLeft);
+    $counter.text(charactersLeft);
 
     // Adjust the counter color based on validity (no more characters)
     if (charactersLeft < 0) {
       // Add class dynamically on browser html and not on the source code:
-      counter.addClass("invalid");
+      $counter.addClass("invalid");
     } else {
-      counter.removeClass("invalid");
+      $counter.removeClass("invalid");
     }
   });
 });
