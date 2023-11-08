@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     // Traverse up the common parent and find the counter within that parent:
     // Find closest ancestor to textarea which is form element and then find descendant element with the class counter within the form:
-    let $counter = $(this).closest("form").find(".counter");
+    const $counter = $(this).closest("form").find(".counter");
     // Add text setter; it will set text content to update the displayed count
     $counter.text(charactersLeft);
 
