@@ -51,3 +51,15 @@ article.tweet .user-details {
   width: 100%;
 }
 
+article.tweet p {
+  text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a;
+}
+
+article.tweet .interactions i {
+  /* Styles for interaction icons */
+  margin: 0 5px;
+}
+/* Interaction icons hover */
+article.tweet .interactions i:hover {
+  color: #ff9090;
+}
