@@ -8,6 +8,30 @@ article.tweet {
   width: 80%; 
   /* Red glow effect */
   box-shadow: 0 4px 8px rgba(255, 7, 58, 0.6); 
+  position: relative;
+}
+
+/* :before pseudo-element is used to create an overlay on top of the background image */
+article.tweet::before {
+  /*  Content property required but will render empty string in this case */
+  content: '';
+  /* Position relative to the initial containing block (viewport)*/
+  position: absolute;
+  /* Cover full width and height of the parent to create full overlay */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Black with 50% opacity */
+  background: rgba(0, 0, 0, 0.5); 
+  /* Ensure overlay is above background image but below text content */
+  z-index: 1;
+}
+
+/* Select all child elements of article.tweet container and gives them a z-index higher than the overlay to appear on top */
+article.tweet * {
+  position: relative;
+  z-index: 2;
 }
 
 article.tweet:hover {
