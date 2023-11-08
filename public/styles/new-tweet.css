@@ -23,7 +23,7 @@
 }
 
 /* Style the form to follow the critical system design */
-.new-tweet form {
+#tweet-form {
   display: flex;
   flex-direction: column;
 }
