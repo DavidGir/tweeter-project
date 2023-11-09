@@ -109,8 +109,13 @@ $(document).ready(function() {
       `);
     return $tweet;
   };
+  // Function call to render all tweets in tweets container
   renderTweets(data);
 
-  //
+  // Add event listener for submit and prevent submission from behavior
+  $("#tweet-form").on("submit", function(event) {
+    alert("Handler for `submit` called.");
+    event.preventDefault();
+  });
 });
 
