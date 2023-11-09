@@ -47,32 +47,6 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   
-  // Fake data from the initial-tweets.json
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd" },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ];
-  
   // Responsible for taking in an array of tweet objects and then appending each one to the #tweets-container
   const renderTweets = function(arrayOfTweetObjects) {
     // Loop through tweets
@@ -109,19 +83,12 @@ $(document).ready(function() {
       `);
     return $tweet;
   };
-  // Function call to render all tweets in tweets container
-  // renderTweets();
 
   // Add event listener for submit and prevent submission from behavior
   $("#tweet-form").on("submit", function(event) {
-    alert("Handler for `submit` called.");
     event.preventDefault();
     // Serialize the form data
     const serializedData = $(this).serialize();
-
-    // Log to test/verify
-    console.log("Form data serialized to send:", serializedData);
-
     // Submit a POST request with the serialized data
     $.ajax({
       type: "POST",
@@ -129,6 +96,10 @@ $(document).ready(function() {
       data: serializedData
     })
       .then(response => {
+        // Clear the form
+        $("#tweet-text").val("");
+        // Reload the tweets
+        loadTweets();
         // Log the response from the server
         console.log('Server response:', response);
       })
@@ -157,6 +128,5 @@ $(document).ready(function() {
   };
   // Call load tweets on page load
   loadTweets();
-  
 
 });
