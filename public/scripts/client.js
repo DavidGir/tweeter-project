@@ -53,8 +53,8 @@ $(document).ready(function() {
     for (const tweet of arrayOfTweetObjects) {
       // Call createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
-      // Append return value to the tweets container
-      $("#tweets-container").append($tweet);
+      // Prepend return value to the tweets container to see our tweet first
+      $("#tweets-container").prepend($tweet);
     }
   };
 
