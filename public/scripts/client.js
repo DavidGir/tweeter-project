@@ -48,30 +48,30 @@ $(document).ready(function() {
 $(document).ready(function() {
   
   // Fake data from the initial-tweets.json
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
+  // const data = [
+  //   {
+  //     "user": {
+  //       "name": "Newton",
+  //       "avatars": "https://i.imgur.com/73hZDYK.png"
+  //       ,
+  //       "handle": "@SirIsaac"
+  //     },
+  //     "content": {
+  //       "text": "If I have seen further it is by standing on the shoulders of giants"
+  //     },
+  //     "created_at": 1461116232227
+  //   },
+  //   {
+  //     "user": {
+  //       "name": "Descartes",
+  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
+  //       "handle": "@rd" },
+  //     "content": {
+  //       "text": "Je pense , donc je suis"
+  //     },
+  //     "created_at": 1461113959088
+  //   }
+  // ];
   
   // Responsible for taking in an array of tweet objects and then appending each one to the #tweets-container
   const renderTweets = function(arrayOfTweetObjects) {
@@ -110,7 +110,7 @@ $(document).ready(function() {
     return $tweet;
   };
   // Function call to render all tweets in tweets container
-  renderTweets(data);
+  // renderTweets();
 
   // Add event listener for submit and prevent submission from behavior
   $("#tweet-form").on("submit", function(event) {
@@ -137,5 +137,26 @@ $(document).ready(function() {
         console.log('Error:', error);
       });
   });
+
+  // The loadTweets function will use jQuery to make a request to /tweets and receive the array of tweets as JSON from the server
+  const loadTweets = function() {
+    $.ajax({
+      url: "/tweets",
+      method: "GET",
+      dataType: "json",
+    })
+      .then((tweets) => {
+        // Clear tweets container to avoid duplication
+        $("#tweets-container").empty();
+        // Call renderTweets with the response data
+        renderTweets(tweets);
+      })
+      .catch((error) => {
+        console.error(`There was an error: ${error}`);
+      });
+  };
+  // Call load tweets on page load
+  loadTweets();
+  
 
 });
