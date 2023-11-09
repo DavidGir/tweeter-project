@@ -71,7 +71,7 @@ $(document).ready(function() {
         </header>
         <p>${tweetObject.content.text}</p>
         <footer class="tweet-footer">
-          <span class="timestamp">${new Date(tweetObject.created_at).toLocaleString()}</span>
+          <span class="timestamp">${timeago.format(new Date(tweetObject.created_at))}</span>
           <div class="interactions">
             <i class="fas fa-reply"></i>
             <i class="fas fa-retweet"></i>
@@ -98,6 +98,8 @@ $(document).ready(function() {
       .then(response => {
         // Clear the form
         $("#tweet-text").val("");
+        // Restart counter
+        $(".counter").text("140");
         // Reload the tweets
         loadTweets();
         // Log the response from the server
@@ -126,7 +128,7 @@ $(document).ready(function() {
         console.error(`There was an error: ${error}`);
       });
   };
-  // Call load tweets on page load
+  // Call load tweets on initial-tweets JSON
   loadTweets();
 
 });
