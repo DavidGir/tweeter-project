@@ -116,6 +116,26 @@ $(document).ready(function() {
   $("#tweet-form").on("submit", function(event) {
     alert("Handler for `submit` called.");
     event.preventDefault();
-  });
-});
+    // Serialize the form data
+    const serializedData = $(this).serialize();
 
+    // Log to test/verify
+    console.log("Form data serialized to send:", serializedData);
+
+    // Submit a POST request with the serialized data
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: serializedData
+    })
+      .then(response => {
+        // Log the response from the server
+        console.log('Server response:', response);
+      })
+      .catch(error => {
+        // Log any error
+        console.log('Error:', error);
+      });
+  });
+
+});
