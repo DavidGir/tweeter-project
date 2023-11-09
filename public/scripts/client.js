@@ -43,9 +43,6 @@ $(document).ready(function() {
 
     }, 500);
   });
-});
-
-$(document).ready(function() {
   
   // Responsible for taking in an array of tweet objects and then appending each one to the #tweets-container
   const renderTweets = function(arrayOfTweetObjects) {
