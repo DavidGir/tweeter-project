@@ -60,26 +60,36 @@ $(document).ready(function() {
 
   // Takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
   const createTweetElement = function(tweetObject) {
+    // Create an escape function to prevent XSS attacks
+    const escape = function(str) {
+      // Create an element instance in memory; it doesn't add it to the src code it justs creates a new element we can work with in JS
+      const div = document.createElement("div");
+      // Create a text node; html will be treated as plain test then appended to div element
+      div.appendChild(document.createTextNode(str));
+      // Return the string containing the div element and the innerHTML property will contain the text with any HTML characters converted to their respective HTML entities
+      return div.innerHTML;
+    };
+    // Use the escape function to "sanitize" user input, ensuring that any input is treated as plain text and not as executable HTML or JavaScript.
     const $tweet = $(`
-      <article class="tweet">
-        <header class="tweet-header">
-          <img class="avatar" src="${tweetObject.user.avatars}" alt="${tweetObject.user.name} Avatar">
-          <div class="user-details">
-            <h2 class="name">${tweetObject.user.name}</h2>
-            <h2 class="handle">${tweetObject.user.handle}</span>
-          </div>
-        </header>
-        <p>${tweetObject.content.text}</p>
-        <footer class="tweet-footer">
-          <span class="timestamp">${timeago.format(new Date(tweetObject.created_at))}</span>
-          <div class="interactions">
-            <i class="fas fa-reply"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-share-alt"></i>
-          </div>
-        </footer>
-      </article>
+    <article class="tweet">
+      <header class="tweet-header">
+        <img class="avatar" src="${escape(tweetObject.user.avatars)}" alt="${escape(tweetObject.user.name)} Avatar">
+        <div class="user-details">
+          <h2 class="name">${escape(tweetObject.user.name)}</h2>
+          <h2 class="handle">${escape(tweetObject.user.handle)}</h2>
+        </div>
+      </header>
+      <p>${escape(tweetObject.content.text)}</p>
+      <footer class="tweet-footer">
+        <span class="timestamp">${escape(timeago.format(new Date(tweetObject.created_at)))}</span>
+        <div class="interactions">
+          <i class="fas fa-reply"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-share-alt"></i>
+        </div>
+      </footer>
+    </article>
       `);
     return $tweet;
   };
