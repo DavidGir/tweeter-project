@@ -87,6 +87,21 @@ $(document).ready(function() {
   // Add event listener for submit and prevent submission from behavior
   $("#tweet-form").on("submit", function(event) {
     event.preventDefault();
+    
+    // Implement form validation before sending data to the server
+    // Get the content of the tweet
+    const tweetContent = $("#tweet-text").val();
+    // Check if the tweet content is empty
+    if (!tweetContent) {
+      alert("Tweet post denied! Transmission content is empty!");
+      return;
+    }
+    // Check if tweet content exceeds 140 characters limit
+    if (tweetContent.length > 140) {
+      alert("Transmission is too long! Limit your tweet to 140 characters!");
+      return;
+    }
+    
     // Serialize the form data
     const serializedData = $(this).serialize();
     // Submit a POST request with the serialized data
