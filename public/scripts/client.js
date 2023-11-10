@@ -95,42 +95,45 @@ $(document).ready(function() {
   $("#tweet-form").on("submit", function(event) {
     event.preventDefault();
     
-    // Implement form validation before sending data to the server
-    // Get the content of the tweet
-    const tweetContent = $("#tweet-text").val();
-    // Check if the tweet content is empty
-    if (!tweetContent) {
-      alert("Tweet post denied! Transmission content is empty!");
-      return;
-    }
-    // Check if tweet content exceeds 140 characters limit
-    if (tweetContent.length > 140) {
-      alert("Transmission is too long! Limit your tweet to 140 characters!");
-      return;
-    }
+    // Hide previous error messages when user submits the form
+    $("#error-message").slideUp("fast", function() {
+
+      // Implement form validation before sending data to the server
+      // Get the content of the tweet
+      const tweetContent = $("#tweet-text").val();
+      // Check if the tweet content is empty
+      if (!tweetContent) {
+        $("#error-message").text("Tweet post denied! Transmission content is empty!").slideDown();
+        return;
+      }
+      // Check if tweet content exceeds 140 characters limit
+      if (tweetContent.length > 140) {
+        $("#error-message").text("Transmission is too long! Limit your tweet to 140 characters!").slideDown();
+        return;
+      }
     
-    // Serialize the form data
-    const serializedData = $(this).serialize();
-    // Submit a POST request with the serialized data
-    $.ajax({
-      type: "POST",
-      url: "/tweets",
-      data: serializedData
-    })
-      .then(response => {
-        // Clear the form
-        $("#tweet-text").val("");
-        // Restart counter
-        $(".counter").text("140");
-        // Reload the tweets
-        loadTweets();
-        // Log the response from the server
-        console.log('Server response:', response);
+      // Validation passes; serialize the form data
+      const serializedData = $("#tweet-form").serialize();
+      console.log("serialized data", serializedData);
+      // Submit a POST request with the serialized data
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: serializedData
       })
-      .catch(error => {
+        .then(response => {
+        // Clear the form
+          $("#tweet-text").val("");
+          // Restart counter
+          $(".counter").text("140");
+          // Reload the tweets
+          loadTweets();
+        })
+        .catch(error => {
         // Log any error
-        console.log('Error:', error);
-      });
+          console.log('Error:', error);
+        });
+    });
   });
 
   // The loadTweets function will use jQuery to make a request to /tweets and receive the array of tweets as JSON from the server
@@ -152,5 +155,5 @@ $(document).ready(function() {
   };
   // Call load tweets on initial-tweets JSON
   loadTweets();
-
+  
 });
