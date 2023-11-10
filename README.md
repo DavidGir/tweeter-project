@@ -10,6 +10,13 @@ Tweeter: Subnet Sanctuary is a dynamic, responsive web application inspired by t
 - **Interactive Tweeting Experience:** Users can post tweets and interact with the subnet community.
 - **Dynamic Content Loading:** Tweets are dynamically loaded and rendered on the page.
 
+## Screenshots
+
+!["desktop-view-1"](https://github.com/DavidGir/tweeter-project/blob/master/docs/Destop-view1.png)
+!["desktop-view-2"](https://github.com/DavidGir/tweeter-project/blob/master/docs/Desktop-view2.png)
+!["tablet-view-1"](https://github.com/DavidGir/tweeter-project/blob/master/docs/Tablet-view1.png)
+!["tablet-view-2"](https://github.com/DavidGir/tweeter-project/blob/master/docs/Tablet-view2.png)
+
 ## Technologies Used
 - HTML5
 - CSS3 (with a focus on Flexbox and Media Queries for responsive design)
