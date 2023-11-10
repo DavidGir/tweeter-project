@@ -12,7 +12,7 @@ header.browser-header {
   /* Centers the image in the header */
   background-position: center; 
   background-repeat: no-repeat; 
-}
+} 
 
 /* Flicker neon sign effect found on https://css-tricks.com/how-to-create-neon-text-with-css/*/
 @keyframes neon-flashing {
@@ -68,3 +68,24 @@ header.browser-header {
   font-weight: normal;
 }
 
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  
+  header.browser-header {
+    /* The total height should be 400px visible plus the height of the nav bar */
+    height: auto;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Bring the cyberpunk city vibe */
+    background-image: url("/images/header-background-image.png");
+    /* Covers the entire area of the header */
+    background-size: cover; 
+    /* Centers the image in the header */
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
+
+
+}
