@@ -87,6 +87,30 @@ article.tweet .interactions i:hover {
   color: #ff9090;
 }
 
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  article.tweet .user-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  article.tweet p {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  article.tweet .timestamp,
+  article.tweet .interactions {
+    font-size: 1.2rem;
+  }
+}
+
+
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   
@@ -97,7 +121,5 @@ article.tweet .interactions i:hover {
     width: 100%;
     font-size: 1.2rem;
   }
-
-
 
 }
