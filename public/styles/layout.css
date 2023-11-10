@@ -11,9 +11,9 @@ html {
 }
 
 /* Outline to visualize layout */
-* {
+/* * {
   outline: 1px solid red;
-}
+} */
 
 /*
  * Global layout stuff
@@ -30,8 +30,7 @@ body {
   text-shadow: 0 0 5px #00faff, 0 0 10px #00faff; 
 }
 
-main {
-  /* Setting width to 90% of its parent */
+.container {
   width: 90%;
   /* Center aligns the main element */
   margin: 0 auto; 
@@ -39,3 +38,37 @@ main {
   background-color: inherit; 
 }
 
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .container {
+    width: 75%;
+    /* Center aligns the main element */
+    margin: 0 auto; 
+    /* Inherit background color from the parent */
+    background-color: inherit; 
+  }
+
+  .container h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+    font-size: 2rem;
+  }
+  
+  .tweeter-narrative {
+    display: flex;
+    text-align: justify;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+}
