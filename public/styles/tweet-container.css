@@ -65,7 +65,6 @@ article.tweet .avatar {
   0 0 20px #ff073a, 
   0 0 40px #ff073a, 
   0 0 80px #ff073a; 
-
 }
 
 article.tweet .user-details {
@@ -86,4 +85,19 @@ article.tweet .interactions i {
 /* Interaction icons hover */
 article.tweet .interactions i:hover {
   color: #ff9090;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  
+  article.tweet .user-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+
+
 }
