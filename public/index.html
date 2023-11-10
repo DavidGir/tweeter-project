@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -58,7 +60,7 @@
     <main class="container">
         <!-- Cyberpunk inspired dialogue -->
         <h1>Tweeter: Subnet Sanctuary</h1>
-        <p>In the shadow of the city's neon glow, there exists a hidden network, a secret subnet known to the few as Tweeter. It's the digital underground, the sanctuary for renegades and rebels, where the only currency is information and the only allegiance is to the truth. Here, amidst the data streams and code whispers, Tweeter stands as a beacon for those who navigate the night. It's more than a platform; it's a pulse, a lifeline for the voices that refuse to be silenced. Connect, communicate, and let the silent revolution be heard</p>
+        <p class="tweeter-narrative">In the shadow of the city's neon glow, there exists a hidden network, a secret subnet known to the few as Tweeter. It's the digital underground, the sanctuary for renegades and rebels, where the only currency is information and the only allegiance is to the truth. Here, amidst the data streams and code whispers, Tweeter stands as a beacon for those who navigate the night. It's more than a platform; it's a pulse, a lifeline for the voices that refuse to be silenced. Connect, communicate, and let the silent revolution be heard</p>
         
         <!-- Forms tweet section -->
         <section class="new-tweet">
@@ -71,7 +73,8 @@
               <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
           </form>
-          <div id="error-message" style="display: none;"></div>
+          <div id="error-message" class="error-message" style="display: none">
+          </div>
         </section>
 
       <!-- Tweets-container -->
