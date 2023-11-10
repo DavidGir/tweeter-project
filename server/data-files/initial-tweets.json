@@ -1,24 +1,24 @@
 [
   {
     "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+      "name": "Cyber Runner",
+      "avatars": "/images/cyber-runner-red.png",
+      "handle": "@NeonBlade"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "Navigated the neon-lit data alleys of the deep web tonight. Found some lost data packets and sent them home. The digital frontier is wild, but someone's gotta run it. #CyberRunner"
     },
-    "created_at": 1699241317214
+    "created_at": 1699409922981
   },
   {
     "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "name": "Scarlette Script",
+      "avatars": "/images/female-4.png",
+      "handle": "@CrimsonScript"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "Just thwarted an attempted breach in the mainframe. Remember, the best firewall is eternal vigilance. #CyberSecurity #FirewallHero"
     },
-    "created_at": 1699327717214
+    "created_at": 1699496322981
   }
 ]
