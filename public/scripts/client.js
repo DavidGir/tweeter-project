@@ -99,8 +99,8 @@ $(document).ready(function() {
     $("#error-message").slideUp("fast", function() {
 
       // Implement form validation before sending data to the server
-      // Get the content of the tweet
-      const tweetContent = $("#tweet-text").val();
+      // Get the content of the tweet and trim the whitespace to prevent user to post with whitespace
+      const tweetContent = $("#tweet-text").val().trim();
       // Check if the tweet content is empty
       if (!tweetContent) {
         $("#error-message").text("Tweet post denied! Transmission content is empty!").slideDown();
