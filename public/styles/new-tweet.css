@@ -46,6 +46,8 @@
   height: 100px;
   /* Disable resizing */
   resize: none; 
+  /* Add a word-break property to prevent user typing long word which does not fit textarea width */
+  word-break: break-word;
 }
 
 .new-tweet textarea:focus {
